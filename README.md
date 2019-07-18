@@ -4,7 +4,7 @@ implemented functions & specification：
 
 1. linux 服务器上任意目录存放脚本
 2. 进入脚本目录，运行serverinfo.py, 这里设置的服务端口是8888
-3. 浏览器打开linux服务器IP+端口88888， 如http://10.xxx.xxx.xxx:88888
+3. 浏览器打开linux服务器IP+端口88888， 如http://10.xxx.xxx.xxx:8888
 4. 默认主页展示的是服务器用户test当前状态，点击update user 更新使用情况
 
   ![images](https://raw.githubusercontent.com/joycezhou007/simple-linux-servers-usage-management/master/images/index.png)
