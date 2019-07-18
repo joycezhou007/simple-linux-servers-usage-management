@@ -1,0 +1,51 @@
+<html>
+<head>Testing Machines Status
+<style type="text/css">
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 2px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+<h5>{{update_info}}</h5>
+<hr>
+<form action="update_user" id="'user_form">
+<table class = "gridtable">
+	<caption align=center style="color: blue; font-size: medium">Update User at http://{{ip}}:8888</a></caption>
+	<tr>
+		<th>login account</th>
+		<th>current-user</th>
+		<th>requested-date</th>
+		<th>expired-date</th>
+		<th>task-information</th>
+		<th>operation</th>
+	<tr>
+	<td>test</td>
+	<td>{{email}}</td>
+	<td>{{update_date}}</td>
+	<td>{{expire_date}}</td>
+	<td>{{task}}</td>
+	<td><input type="submit" value="update user" /></td>
+</table>
+</form>
+</br>
+</body>
