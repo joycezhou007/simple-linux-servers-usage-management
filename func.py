@@ -10,17 +10,17 @@ def get_server_ip():
 
 
 def get_last_change_date(account):
-    return commands.getoutput(''' echo '(echo "UUFacWF6QDEyMwo=" | base64 -d)' | sudo chage -l ''' + account + ''' |awk 'NR==1 {print}'|cut -f2 -d":" ''')
-    # s,p = commands.getstatusoutput(''' echo 'echo "UUFacWF6QDEyMwo=" | base64 -d' | sudo chage -l test ''')
+    return commands.getoutput(''' echo '(echo "encrypted-passwords" | base64 -d)' | sudo chage -l ''' + account + ''' |awk 'NR==1 {print}'|cut -f2 -d":" ''')
+    # s,p = commands.getstatusoutput(''' echo 'echo "encrypted-passwords" | base64 -d' | sudo chage -l test ''')
 
 def get_expired_change_date(account):
-    return commands.getoutput(''' echo '(echo "UUFacWF6QDEyMwo=" | base64 -d)' | sudo chage -l ''' + account + ''' |awk 'NR==4 {print}'|cut -f2 -d":" ''')
+    return commands.getoutput(''' echo '(echo "encrypted-passwords" | base64 -d)' | sudo chage -l ''' + account + ''' |awk 'NR==4 {print}'|cut -f2 -d":" ''')
 
 
 def set_expire_date(account,expire_date):
-    #dates, datep = commands.getstatusoutput(''' echo '(echo "UUFacWF6QDEyMwo=" | base64 -d)' | sudo usermod -e ''' + expire_date + ' ' + account)
+    #dates, datep = commands.getstatusoutput(''' echo '(echo "encrypted-passwords" | base64 -d)' | sudo usermod -e ''' + expire_date + ' ' + account)
     s_cmd = "sudo usermod -e {0} {1}".format(expire_date,account)
-    dates, datep = commands.getstatusoutput(''' echo '(echo "UUFacWF6QDEyMwo=" | base64 -d)' | ''' + s_cmd)
+    dates, datep = commands.getstatusoutput(''' echo '(echo "encrypted-passwords" | base64 -d)' | ''' + s_cmd)
     if dates == 0:
         return True
     else:
