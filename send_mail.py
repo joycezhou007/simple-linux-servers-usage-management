@@ -3,13 +3,13 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 
-sender =  'zhoulijuan@actionsky.com'
-send_pwd = 'j7U3kgAwo23HW7J9'
+sender =  'xxx@xxxx.com'
+send_pwd = 'xxxxxxxxxx' #email authorization code
 smtp_server = 'smtp.exmail.qq.com'
 
 
 def send_mail(receiver,ip,pwd,new_expire_date):
-    default_receivers = ['zhoulijuan@actionsky.com','zhoulijuan@actionsky.com']
+    default_receivers = ['default1@xxxxx.com','default2@xxxxx.com']
     default_receivers.append(receiver)
     print (default_receivers)
 
