@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change User</title>
+</head>
+
+<body>
+<h1>Change User</h1>
+<form id="update_form" method="post">
+    <p> please input your actionsky mail address</p>
+    <p><label>Email</label>
+        <input type="email" style="width:150px;" name="email" id="email" required pattern="\w*@actionsky.com">
+    </p>
+     <p><label>Closing Date</label>
+        <input type="date" style="width:160px;" name="expire_date" id="toDate"  required>
+    </p>
+    <p><label>TaskInfo</label>
+        <input type="text" style="width:200px;" name="task" id="task" required>
+    </p>
+    </p>
+        <input type="submit" align="right" value="submit" id="submit" required>
+    </p>
+</form>
+</body>
+</html>
